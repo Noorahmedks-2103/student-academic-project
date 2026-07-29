@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dashboard',
-    'bootstrap5',
+    'django_bootstrap5',
     'crispy_forms',
     'crispy_bootstrap5'
 ]
@@ -128,5 +128,11 @@ LOGIN_REDIRECT_URL = "home"
 LOGIN_URL = 'login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 GOOGLE_BOOKS_API_KEY = os.getenv("GOOGLE_BOOKS_API_KEY")
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
