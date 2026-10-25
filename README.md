@@ -46,8 +46,7 @@ Student-Study-Portal/
 ## Installation
 
 ```bash
-git clone https://github.com/ravi-928/academic-learning-management-portal.git
-
+git clone https://github.com/Noorahmedks-2103/student-academic-project.git
 cd academic-learning-management-portal
 
 pip install -r requirements.txt
