@@ -102,7 +102,6 @@ http://127.0.0.1:8000/
 
 ## Author
 
-**Ravi Teja**
+**K S NOOR AHAMAD**
 
-- GitHub: https://github.com/ravi-928
-- LinkedIn: (Add your LinkedIn profile)
+- GitHub: https://github.com/Noorahmedks-2103
