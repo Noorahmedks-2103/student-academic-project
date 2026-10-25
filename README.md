@@ -72,12 +72,12 @@ http://127.0.0.1:8000/
 
 ### Dashboard
 
-<img width="1920" alt="Login Page" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20145037.png" />
+<img width="1920" alt="" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20145037.png" />
 
 
 ### Student Profile
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d607367e-9a44-41cb-a4ce-04261e814f28" />
+<img width="1920" alt="" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20150929.png" />
 
 
 ### Study Resources
