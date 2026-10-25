@@ -68,23 +68,22 @@ http://127.0.0.1:8000/
 
 ### Login Page
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ad7230a0-779f-4065-a74a-2d46a48fac2e" />
-
+<img width="1920" alt="Login Page" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20125350.png" />
 
 ### Dashboard
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a59d978b-e6d3-42b2-b696-f81c310575f1" />
+<img width="1920" alt="" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20145037.png" />
 
 
 ### Student Profile
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d607367e-9a44-41cb-a4ce-04261e814f28" />
+<img width="1920" alt="" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20150929.png" />
 
 
 ### Study Resources
 
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/207160b0-3ffa-4326-bd92-6d745315479b" />
+<img width="1920" alt="Homework Management" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20150221.png" />
 
 ---
 
