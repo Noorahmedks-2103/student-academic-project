@@ -315,7 +315,22 @@ def dictionary(request):
             text = form.cleaned_data['text']
 
             url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{text}"
-            r = requests.get(url)
+            r = requests.get(url,timeout=10)
+
+            if r.status_code == 429 :
+                context={
+                    'form':form,
+                    'input':text,
+                    'error':"Too many requests. Please try again later.",
+                }
+                return render(request, "dashboard/dictionary.html", context)
+            if not r.ok:
+                context = {
+                    'form': form,
+                    'input': text,
+                    'error': "Word not found. Please try another word."
+                }
+                return render(request, "dashboard/dictionary.html", context)
             answer = r.json()
 
             try:
@@ -339,6 +354,7 @@ def dictionary(request):
                 context = {
                     'form': form,
                     'input': "",
+                    'error': "Word not found. Please try another word."
                 }
 
             return render(request, "dashboard/dictionary.html", context)
@@ -355,24 +371,40 @@ def dictionary(request):
 def wiki(request):
     if request.method == "POST":
         text = request.POST['text']
-        print("Text =",repr(text))
         form = DashboardForm(request.POST)
-        wikipedia.set_lang("en")
-        search=wikipedia.page(text)
-        context = {
-            "form": form,
-            "title": search.title,
-            "link": search.url,
-            "details": search.summary,
-        }
-        return render(request, "dashboard/wiki.html",context)
-    else:
-        form = DashboardForm()
-        context = {
-            'form':form
-        }
-    return render(request, "dashboard/wiki.html",context)
-
+        try:
+            response=requests.get("https://en.wikipedia.org/w/api.php",
+                params={
+                    "action":"query",
+                    "format":"json",
+                    "prop":"extracts|info",
+                    "explaintext":1,
+                    "inprop":"url",
+                    "titles":text,
+                    "redirects":1,
+                },
+                headers={"User-Agent":"StudentAcademicProject/1.0"},
+                timeout=10,
+                )
+            response.raise_for_status()
+            data=response.json()
+            page=next(iter(data["query"]["pages"].values()))
+            context = {
+                "form":form,
+                "title":page.get("title",""),
+                "link":page.get("fullurl",""),
+                "details":page.get("extract","No summary available for this topic."),
+            }
+        except (requests.RequestException, ValueError, StopIteration):
+            context={
+                "form":form,
+                "title":"Error",
+                "link":"",
+                "details":"Unable to fetch data from Wikipedia. Please try again later.",
+            }
+        return render(request, "dashboard/wiki.html", context)
+    form=DashboardForm()
+    return render(request,"dashboard/wiki.html",{"form":form})
 
 def conversion(request):
     form = ConversionForm(request.POST or None)

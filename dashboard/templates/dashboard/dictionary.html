@@ -9,6 +9,11 @@
         {{form}}
         <input class="btn btn-danger" type="submit" value="Submit">
     </form><br>
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
     <div class="content-section p-0 mt-5">
         {% if input %}
         <div class="custom-header">
@@ -33,8 +38,8 @@
         <hr>
 
     </div>
-    {% else %}
-    <h2>Sorry, API request limit exceeded</h2>
+    {% elif error %}
+    <h2>{{error}}</h2>
     {% endif %}
 </section>
 {% endblock content %}
