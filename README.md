@@ -72,7 +72,7 @@ http://127.0.0.1:8000/
 
 ### Dashboard
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a59d978b-e6d3-42b2-b696-f81c310575f1" />
+<img width="1920" alt="Login Page" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20145037.png" />
 
 
 ### Student Profile
