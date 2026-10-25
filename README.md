@@ -83,7 +83,7 @@ http://127.0.0.1:8000/
 ### Study Resources
 
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/207160b0-3ffa-4326-bd92-6d745315479b" />
+<img width="1920" alt="Homework Management" src="https://raw.githubusercontent.com/Noorahmedks-2103/student-academic-project/main/Screenshot%202026-10-25%20150221.png" />
 
 ---
 
